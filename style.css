@@ -1,0 +1,225 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+}
+
+*{
+    font-family: "Microsoft JhengHei" !important;
+}
+
+.video-container{
+
+    display: table;
+    margin: 0 auto;
+}
+
+.flex-box{
+    display: flex;
+}
+/* Video Section */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* 使用 viewport height 來確保該區塊占滿整個視窗的高度 */
+    overflow: hidden;
+}
+
+.video-section video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 其他區塊 */
+.section {
+    padding: 50px 0;  /* 上下各有50px的間距，可以根據需求調整 */
+    text-align: center;
+    color: white;
+}
+
+.corner-video {
+    align-self: flex-end; /* 確保影片對齊到容器的右側 */
+}
+
+.second-section {
+    background: #6495A4;
+    padding: 0;
+    display: flex;            /* 設置此區塊為flex容器 */
+    justify-content: space-between;  /* 主軸空間分配，確保影片和其他內容之間有最大的空間 */
+    text-align: left;         /* 這將影響文本對齊，如有需要，可以根據具體需求進行調整 */
+    color: #eee;
+}
+
+.third-section {
+    background-color: #444;  /* 更深的灰色背景 */
+}
+.second-section .content{
+    width: 55%;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    display: table;
+    margin: 0 auto;
+    line-height: 1.8em;
+    margin-top: 70px;
+}
+.second-section .text{
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.8em;
+}
+
+.buttons{
+    display: flex;
+    margin-top: 20px;
+}
+
+.buttons div{
+    width: 20%;
+    cursor: pointer;
+    margin: 0 1%;
+}
+
+.buttons div img{
+    width: 100%;
+    cursor: pointer;
+}
+
+/* .third-section img{
+    width: 25%;
+} */
+
+.img-wall{
+    width: 80%;
+    display: table;
+    margin: 0 auto;
+}
+
+.third-text{
+    font-size: 48px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+.photo-grid img{
+    max-width: 100%;
+}
+
+.singleimg{
+    width: 22%;
+    margin: 1.5%;
+}
+
+.photo-grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.third-section .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.third-section .buttons div{
+    width: 16%;
+}
+
+.media-wall{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.media-wall video{
+    max-width: 100%;
+}
+
+.singleVideo{
+    margin: 1.5%;
+    width: 30%;
+}
+
+.list-icon{
+    width: 20px;;
+}
+
+.second-text-box{
+    display: flex;
+    word-break: break-all;
+    align-items: baseline;
+    /* align-items: center; */
+}
+
+.video-container video{
+    width: 100%;
+}
+
+
+/* Responsive Design */
+@media only screen and (max-width: 1366px) {
+    .second-section .content{
+        width: 50%;
+    }
+
+    .second-section .buttons div{
+        width: 45%;
+    }
+}
+
+/* Tablets and Small Screens */
+@media only screen and (max-width: 768px) {
+    .photo-grid .singleimg {
+        width: 48%;  /* 2 images per row */
+    }
+
+    .media-wall .singleVideo {
+        width: 48%;  /* 2 videos per row */
+    }
+
+    .second-section{
+        display: table;
+    }
+
+    .second-section .content {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .second-section .buttons{
+        flex-wrap: wrap;
+    }
+    .second-section .corner-video{
+        width: 100%;
+        display: none;
+    }
+    .second-text-box{
+        align-items: baseline;
+        font-size: 20px;
+    }
+    .third-section .buttons div {
+        width: 32%;
+    }
+    .third-text{
+        font-size: 32px;
+    }
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 480px) {
+    .photo-grid .singleimg {
+        width: 98%;  /* 1 image per row */
+    }
+
+    .media-wall .singleVideo {
+        width: 98%;  /* 1 video per row */
+    }
+}
