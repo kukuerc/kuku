@@ -5,14 +5,35 @@ body, html {
     background-color: #000;
 }
 
+.menu-list{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.menu-lang{
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    margin: 0 10px;
+}
+
 *{
     font-family: "Microsoft JhengHei" !important;
 }
 
-.video-container{
+.fixed-top-bar{
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+}
 
+.video-container{
     display: table;
-    margin: 0 auto;
+    margin: 50px auto 0;
 }
 
 .flex-box{
