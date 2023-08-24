@@ -18,6 +18,10 @@ body, html {
     margin: 0 10px;
 }
 
+.ecology-section{
+    background: #000;
+    padding: 20px 0;
+}
 *{
     font-family: "Microsoft JhengHei" !important;
 }
